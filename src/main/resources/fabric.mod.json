@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "id": "seedfindersmod",
+  "version": "${version}",
+
+  "name": "Seedfinder's mod",
+  "description": "Extra functionality on top of racemod for seedfinders.",
+  "authors": [
+    "marinersfan824",
+    "pixfumy",
+    "sharpieman20",
+    "gregor0410",
+    "kingcontaria"
+  ],
+  "contact": {
+    "homepage": "",
+    "sources": ""
+  },
+
+  "license": "CC0-1.0",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "io.github.marinersfan824.racemod.Main"
+    ]
+  },
+  "mixins": [
+    "seedfindersmod.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.12.12",
+    "minecraft": "1.7.10",
+    "racemod": ">=5.8.0"
+  },
+  "suggests": {
+    "flamingo": "*"
+  }
+}
