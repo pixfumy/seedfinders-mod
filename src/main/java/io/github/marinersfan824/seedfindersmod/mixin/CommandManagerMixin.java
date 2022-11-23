@@ -57,8 +57,8 @@ public class CommandManagerMixin extends CommandRegistry {
                         if (pair.getKey().equalsIgnoreCase(seedType)) {
                             rngStreamGenerator.setSeed(pair.getKey(), (new Random()).nextLong());
                             ClientPlayerEntity player = MinecraftClient.getInstance().field_3805;
-                            player.addMessage(new TranslatableText("RNG seed " + pair.getKey() + " changed. Do /rates again to see rates."));
-                            source.getWorld().playSound(player.x, player.y, player.z, "fireworks.launch", 1000.0F, 0.8F + 0.2F);
+                            player.addMessage(new TranslatableText("RNG seed " + pair.getKey() + " changed."));
+                            RNGStreamGenerator.tellPlayerCurrentRates(overWorld);
                             return;
                         }
                     }
